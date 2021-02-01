@@ -1,0 +1,156 @@
+.navabar {
+  background: #000;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.4s ease-in;
+  border-bottom: 1px solid #fff;
+}
+.navabar.active {
+  background-color: #fff;
+}
+.navabar.active .nava-links {
+  color: #000000;
+}
+.navabar.active .navabar-logo {
+  color: #000000;
+}
+.navabar-logo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  align-self: center;
+  font-size: 2rem;
+}
+
+.fa-firstdraft {
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.nava-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.nava-item {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.nava-links {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+}
+
+.nava-links:hover {
+  color: #fff;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.nava-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .NavabarItems {
+    position: relative;
+  }
+
+  .nava-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nava-menu.active {
+    background: #242222;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nava-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nava-links:hover {
+    background-color: #1888ff;
+    border-radius: 0;
+  }
+
+  .navabar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .nava-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    background: #1888ff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .nava-links-mobile:hover {
+    background: #fff;
+    color: #1888ff;
+    transition: 250ms;
+  }
+
+  button {
+    display: none;
+  }
+}
